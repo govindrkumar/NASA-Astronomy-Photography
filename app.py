@@ -7,7 +7,7 @@ app = Flask(__name__)
 
 
 # calculating date timeline to make sure it doesnt generate 20 random pieces of dictionary data
-api_key = "f0Pw3meacI9F4Sj858I9deuisxs9nRmqTcqiBzUl"
+api_key = os.environ.get("api_key")
 startdate, enddate = calculatedate()
 
 siteconnection = f"https://api.nasa.gov/planetary/apod?api_key={api_key}&start_date={startdate}&end_date={enddate}"
@@ -20,7 +20,7 @@ photos = response.json()
 def get_space_data():
 
     startdate, enddate = calculatedate()
-    api_key = "f0Pw3meacI9F4Sj858I9deuisxs9nRmqTcqiBzUl"
+    api_key = os.environ.get("api_key")
     api_site = f"https://api.nasa.gov/planetary/apod?api_key={api_key}&start_date={startdate}&end_date={enddate}"
 
     nasadata = connection(api_site)
