@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>NASA Astronomy Picture Dataset</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <meta charset="UTF-8">
+</head>
+
+<body>
+
+    <div class="parent">
+        <div class="div1">
+            <p> Nasa Picture Dataset</p>
+        </div>
+        {%for photo in photos%}
+        <div class="div{{ loop.index + 1 }}">
+            <a href="{{ url_for('clickdata', photo_id=loop.index0) }}" class="card-link">
+                <img src="{{ photo.url }}" alt="{{ photo.title }}">
+                <div class="overlay">
+                    <h3>{{ photo.title }}</h3>
+                    <p class="date">{{ photo.date }}</p>
+                    <p class="desc">{{ photo.explanation }}</p>
+                </div>
+            </a>
+        </div>
+        {% endfor %}
+        <div class="div22">
+            <p>Last 20 uploaded pictures, server can't handle all.</p>
+        </div>
+    </div>
+</body>
+
+</html>

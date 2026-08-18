@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>NASA Astronomy Picture Dataset</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='expl.css') }}">
+    <meta charset="UTF-8">
+</head>
+
+<body>
+    <div class="container">
+        <!--Div 2 front picture-->
+        <div class="div2">
+            <img src="{{ photo.hdurl }}" alt="{{ photo.title }}">
+        </div>
+        <!--Div 1 description box, keep black and opacity 45%-->
+        <div class="div1">
+            <h1>{{ photo.title }}</h1>
+            <p>Date: {{ photo.date }}</p>
+            <p>{{ photo.explanation }}</p>
+        </div>
+        <button href="index.html"></button>
+    </div>
+
+</body>
+
+</html>

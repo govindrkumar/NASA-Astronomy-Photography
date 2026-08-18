@@ -1,0 +1,36 @@
+.container {
+
+    background-color: azure;
+    border: 2px solid black;
+    border-radius: 20px;
+    padding: 20px;
+}
+
+
+h1 {
+    text-decoration: underline;
+}
+
+
+body {
+    padding: 220px;
+    background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR2s-HKqfxqaff7L3fpd4xwyZHSyKQUbOa3j7u3h25moQ&s=10');
+}
+
+
+
+html {
+
+    margin: 0;
+    padding: 0;
+
+}
+
+.div2 {
+    place-items: center;
+    overflow: hidden;
+    max-width: 200%;
+    object-fit: contain;
+    border-radius: 40px;
+    height: auto;
+}
