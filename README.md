@@ -1,5 +1,4 @@
 
-========================================================================================================================================
 A rotation showcasing all the pictures taken and uploaded by NASA on nasa.gov in a sort of space-like tablet environment
 
 Things used for this project =
